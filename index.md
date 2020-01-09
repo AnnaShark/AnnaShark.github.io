@@ -17,9 +17,9 @@
                         <a href="/"><img src="shark.jpg" alt="Logo"></a>
                     </header> 
                     <nav> 
-                        <a href="Hot_news.html" title="Go to about hot news section"> Hot news </a> 
-                        <a href="sports.html" title="Go to sports section"> Sports </a>
-                        <a href="celebs.html" title="Go to celebreties section"> Celebreties </a>
+                        <a href="Hot_news.html" title="Go to about hot news section"> Hot news </a> &nbsp;
+                        <a href="sports.html" title="Go to sports section"> Sports </a> &nbsp;
+                        <a href="celebs.html" title="Go to celebreties section"> Celebreties </a> &nbsp;
                        <a href="contacto.html" title="Go to contact section"> Contact </a> 
                    </nav> 
                     <div> 
