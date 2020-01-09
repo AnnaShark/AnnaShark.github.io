@@ -23,7 +23,7 @@
                        <a href="contacto.html" title="Go to contact section"> Contact </a> 
                    </nav> 
                     <div> 
-                        <h1></h1> <strong>Australia fires: How the world has responded to the crisis</strong> </h1> 
+                        <h1><strong>Australia fires: How the world has responded to the crisis</strong> </h1> 
                         <br>
                         <img src="article1.jpg" alt="Australia"/> 
                         <p> The world has watched with horror as bushfires have torn across Australia, leaving a trail of destruction in their wake.
