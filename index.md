@@ -46,7 +46,7 @@
                             Some of the biggest sums offered to the relief efforts have come from celebrities.
                             
                             US singer Pink, Australian pop star Kylie Minogue, Oscar-winning actress Nicole Kidman, British singer Elton John and Australian actor Chris Hemsworth are among those to make major donations.</p>
-                        <h1></h1> <strong>The US, Iran and Qasem Soleimani story explained in 400 words</strong> </h1> 
+                        <h1><strong>The US, Iran and Qasem Soleimani story explained in 400 words</strong> </h1> 
                         <br>
                         <img src="article2.jpg" alt="Soleimani"/> 
                         <p> The US and Iran have long been foes.
