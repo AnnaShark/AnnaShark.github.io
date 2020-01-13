@@ -77,7 +77,7 @@
                      </div> 
                 </div> 
             </section> 
-            <footer><time>07.01.2020</time><p>Anna</p></footer>
+            <footer><time datetime="2018-01-13">Jan 13</time><p>Anna</p></footer>
         </div>
     </body>
 </html>                
