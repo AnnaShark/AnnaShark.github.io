@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+	<title>Anna Shark</title>
+	
+	<script src="external/jquery/jquery.js"></script>
+	<script src="jquery-ui.js"></script>
+	
+
+	<style>
+
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		margin: 50px;
+		text-align: center;
+	}
+
+  .field{
+    width: 200px;
+  }
+
+	.ui-button{
+		width: 300px;
+		font-size: 90%;
+	}
+
+
+	.wrapper1{
+    display: flex;
+    justify-content: center;
+
+	}
+
+
+	footer{
+		text-align: center;
+		color: grey;
+		font-size: 75%;
+    margin: 100px;
+	}
+
+	</style>
+<link href="jquery-ui.css" rel="stylesheet">	
+
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
+      showOn: "button",
+      buttonImage: "images/calendar.gif",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    });
+  } );
+  </script>
+
+  <script>
+  $( function() {
+    $( ".widget input[type=submit], .widget a, .widget button" ).button();
+    $( "button, input, a" ).click( function( event ) {
+      event.preventDefault();
+    } );
+  } );
+  </script>
+
+</head>
+
+<body>
+<header>
+
+<button onclick="document.location='index.html'" class="ui-button">Home</button>
+<button onclick="document.location='prof.html'" class="ui-button">Professional info</button>
+<button onclick="document.location='meet.html'" class="ui-button">Let´s meet</button>
+<button onclick="document.location='contact.html'" class="ui-button">Contacts</button>
+
+<h1>Choose a date when you want to meet:</h1>
+
+
+</header>
+<div class="wrapper1"> 
+
+<div id="datepicker"></div>
+
+
+
+</div>
+
+
+<br />
+<label>Name</label>
+<input class = "field" type="text" name="text" />
+<br />
+<br />
+<label>Email</label>
+<input class = "field" type="text" name="email" />
+
+<br />
+<br />
+<input class="ui-button ui-widget ui-corner-all" type="submit" value="Setup a meeting">
+
+</body>
+
+
+<footer>
+    <p>Created by Anna Shark 2020</p>
+</footer>
+</html>
