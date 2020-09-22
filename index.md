@@ -1,83 +1,135 @@
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+	<title>Anna Shark</title>
+	
+	<script src="external/jquery/jquery.js"></script>
+	<script src="jquery-ui.js"></script>
+	
 
-<html lang="en">
-    <head><meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="Description" content="News and articles">
-        <title>Shark news</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="fav.ico">
-        <style> body{font-family:arial,sans-serif;font-size:16px;} h2,h3,h4,h5,h6,p{font-family:serif;} table{border-collapse:collapse;} th,td{border:2px solid gray;}
-        </style>
-    </head>
-    <body> 
-        <div> 
-            <section id="introSection"> 
-                <div> 
-                    <header> 
-                        <a href="/"><img src="shark.jpg" alt="Logo"></a>
-                    </header> 
-                    <nav> 
-                        <a href="Hot_news.html" title="Go to about hot news section"> Hot news </a> &nbsp;
-                        <a href="sports.html" title="Go to sports section"> Sports </a> &nbsp;
-                        <a href="celebs.html" title="Go to celebreties section"> Celebreties </a> &nbsp;
-                       <a href="contacto.html" title="Go to contact section"> Contact </a> 
-                   </nav> 
-                    <div> 
-                        <h1><strong>Australia fires: How the world has responded to the crisis</strong> </h1> 
-                        <br>
-                        <img src="article1.jpg" alt="Australia"/> 
-                        <p> The world has watched with horror as bushfires have torn across Australia, leaving a trail of destruction in their wake.
+	<style>
 
-                            The blazes have razed almost 2,000 homes, and killed at least 25 people and hundreds of millions of animals since they began in September.
-                            
-                            People in Australia and abroad, including politicians and celebrities, have been eager to find ways to offer assistance and support.
-                            
-                            But authorities have warned that some kinds of help can actually be a hindrance and overwhelm fire-affected communities.
-                            
-                            Here are some of the ways that the world has responded to Australia's bushfire crisis, and what help those responding to the crisis say is needed.
-                            
-                            Creative fundraising
-                            Many people have made financial donations to help with the response to the crisis.
-                            
-                            One fundraiser for fire services in New South Wales (NSW), launched by Australian comedian Celeste Barber, raised more than A$20m (£10.6m; $13m) in just 48 hours. It's now topped A$30m, with donations from more than 1.1 million people.
-                            
-                            Big business in Australia has also pledged significant contributions.
-                            
-                            Some of the biggest sums offered to the relief efforts have come from celebrities.
-                            
-                            US singer Pink, Australian pop star Kylie Minogue, Oscar-winning actress Nicole Kidman, British singer Elton John and Australian actor Chris Hemsworth are among those to make major donations.</p>
-                        <h1><strong>The US, Iran and Qasem Soleimani story explained in 400 words</strong> </h1> 
-                        <br>
-                        <img src="article2.jpg" alt="Soleimani"/> 
-                        <p> The US and Iran have long been foes.
+	@font-face {
+	  font-family: myFirstFont;
+	  src: url(Painter-LxXg.ttf);
+	}
 
-                            Problems can be traced to at least 1979, when Iran's US-backed shah was overthrown and the country became an Islamic republic.
-                            
-                            That year, amidst the fallout from the revolution, dozens of Americans were taken hostage inside the US embassy in the capital Tehran. Relations have been frosty ever since.
-                            
-                            There were signs of a diplomatic thaw in 2015, when Iran agreed a landmark deal to limit its nuclear programme, allaying international concerns. It did so in return for the lifting of tough economic sanctions.
-                            
-                            But the election of US President Donald Trump the following year posed a challenge. He hated the nuclear accord, which he branded "the worst deal ever negotiated".
-                            
-                            In 2018, he abandoned it altogether and reinstated US sanctions to force Iran's leaders to agree to a new deal - something they rejected, even as the Iranian economy was sent into a deep recession.
-                            Mr Trump stepped up the pressure in May 2019 by applying secondary sanctions on countries that continued to do business with Iran.
 
-                            Relations further deteriorated when six oil tankers were sabotaged in the Gulf of Oman in May and June. Washington accused Iran of being behind these attacks. Iran denied this.
-                            
-                            In July, Tehran started suspending some of the commitments it had made under the nuclear deal.
-                            
-                            Then, in late December, the US blamed an Iranian-backed militia for a rocket attack which killed an American contractor in northern Iraq.
-                            
-                            Washington retaliated by bombing bases associated with the militia in Iraq and Syria, killing at least 25 fighters.
-                            
-                            These bombings sparked a backlash in Iraq. The US embassy in the capital, Baghdad, was attacked by crowds of protesters.
-                            
-                            President Trump blamed Iran for orchestrating the attack and warned it would "pay a very big price".</p>
-                            
-                     </div> 
-                </div> 
-            </section> 
-            <footer><time datetime="2018-01-13">Jan 13</time><p>Anna</p></footer>
-        </div>
-    </body>
-</html>                
+	h1{
+		font-family:myFirstFont;
+	}
+
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		text-align: center;
+	}
+
+	.ui-button{
+		width: 300px;
+		font-size: 90%;
+	}
+
+	#tabs-1,#tabs-2, #tabs-3 {
+		text-align: left;
+	}
+
+	footer{
+		text-align: center;
+		color: grey;
+		font-size: 75%;
+	}
+
+	</style>
+<!-- Enlaces nivoslider -->	
+	<link href="jquery-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="nivo-slider/themes/dark/dark.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="nivo-slider/nivo-slider.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="nivo-slider/jquery.nivo.slider.js"></script>
+
+	<script type="text/javascript">
+		$(window).load(function() {
+		$('#slider').nivoSlider({
+			effect: 'fold',               // Specify sets like: 'fold,fade,sliceDown'
+            slices: 15,                     // For slice animations
+            animSpeed: 500,                 // Slide transition speed
+            pauseTime: 3000,                // How long each slide will show
+            startSlide: 0,                  // Set starting Slide (0 index)
+            controlNav: false,               // 1,2,3... navigation
+            controlNavThumbs: false,        // Use thumbnails for Control Nav
+            pauseOnHover: false,             // Stop animation while hovering
+            directionNav: false, 
+            manualAdvance: false,           // Force manual transitions
+            //prevText: 'Prev',               // Prev directionNav text
+            //nextText: 'Next',               // Next directionNav text
+            randomStart: false,             // Start on a random slide
+            beforeChange: function(){},     // Triggers before a slide transition
+            afterChange: function(){},      // Triggers after a slide transition
+            slideshowEnd: function(){},     // Triggers after all slides have been shown
+            lastSlide: function(){},        // Triggers when last slide is shown
+            afterLoad: function(){}         // Triggers when slider has loaded
+			});
+		});
+	</script>
+
+
+<!-- Enlaces tabs https://jqueryui.com/tabs/ -->	
+	  <script>
+	  $( function() {
+	    $( "#tabs" ).tabs();
+	  } );
+	  </script>
+
+
+</head>
+
+<body>
+<header>
+
+<button onclick="document.location='index.html'" class="ui-button">Home</button>
+<button onclick="document.location='prof.html'" class="ui-button">Professional info</button>
+<button onclick="document.location='meet.html'" class="ui-button">Let´s meet</button>
+<button onclick="document.location='contact.html'" class="ui-button">Contacts</button>
+
+<h1>Hi! I am Anna Sharkova,</h1>
+<h1> here you can learn more about me:)</h1>
+
+</header>
+
+<div id="slider" class="nivoSlider"> 
+<img src="nivo-slider/demo/images/2.jpg" alt="" title="Travelling" data-transition="fade" />
+<img src="nivo-slider/demo/images/3.jpg" alt="" title="Hiking" data-transition="fade" /> 
+<img src="nivo-slider/demo/images/4.jpg" alt="" title="Skating" data-transition="fade" /> 
+<img src="nivo-slider/demo/images/5.jpg" alt="" title="Protecting from 5G" data-transition="fade" /> 
+</div>
+
+<br>
+
+<div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+<li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="#tabs-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">Professional summary</a></li>
+<li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tabs-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Personal summary</a></li>
+<li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-3" aria-labelledby="ui-id-3" aria-selected="false"><a href="#tabs-3" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">My favourite joke</a></li>
+</ul>
+<div id="tabs-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
+<p>I am a product owner at Marfeel and a UPF MSc in Cognitive Systems and Interactive Media, with a background in software development and finance. I have worked on the development of BI and transport security systems, online marketplaces, CRM, PRM and self-care portals for telecom companies.</p>
+
+<p>Most of my experience refers to leading remote and onsite teams in international project-oriented environments. My current interests lie in data science and I am curious about possible commercial applications for ANNs and machine learning technologies. </p>
+</div>
+<div id="tabs-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+<p> I am from Russia (Moscow), moved to Barcelona in 2018 and blablablablablablablblablblablablbalbalblablablbalbalbalballblablablablablablablblablablablabalbalbalbalblablablablablablab </p>
+<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+</div>
+<div id="tabs-3" aria-labelledby="ui-id-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+<p>Not yet created</p>
+<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, msagna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+</div>
+</div>
+
+</body>
+
+
+<footer>
+    <p>Created by Anna Shark 2020</p>
+</footer>
+</html>
