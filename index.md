@@ -1,53 +1,55 @@
 <html lang="us">
+
+
+
 <head>
 	<meta charset="utf-8">
 	<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 	<title>Anna Shark</title>
-	
 	<script src="external/jquery/jquery.js"></script>
 	<script src="jquery-ui.js"></script>
 	
 
-	<style>
+<style>
 
-	@font-face {
+@font-face {
 	  font-family: myFirstFont;
 	  src: url(Painter-LxXg.ttf);
 	}
 
 
-	h1{
+h1{
 		font-family:myFirstFont;
 	}
 
-	body{
+body{
 		font-family: "Trebuchet MS", sans-serif;
 		text-align: center;
 	}
 
-	.ui-button{
+.ui-button{
 		width: 300px;
 		font-size: 90%;
 	}
 
-	#tabs-1,#tabs-2, #tabs-3 {
+#tabs-1,#tabs-2, #tabs-3 {
 		text-align: left;
 	}
 
-	footer{
+footer{
 		text-align: center;
 		color: grey;
 		font-size: 75%;
 	}
 
-	</style>
+</style>
 <!-- Enlaces nivoslider -->	
 	<link href="jquery-ui.css" rel="stylesheet">
 	<link rel="stylesheet" href="nivo-slider/themes/dark/dark.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="nivo-slider/nivo-slider.css" type="text/css" media="screen" />
 	<script type="text/javascript" src="nivo-slider/jquery.nivo.slider.js"></script>
 
-	<script type="text/javascript">
+<script type="text/javascript">
 		$(window).load(function() {
 		$('#slider').nivoSlider({
 			effect: 'fold',               // Specify sets like: 'fold,fade,sliceDown'
