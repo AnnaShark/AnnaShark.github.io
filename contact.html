@@ -8,7 +8,8 @@
 	<script src="external/jquery/jquery.js"></script>
 	<script src="jquery-ui.js"></script>
 	<script type="text/javascript" src="Contactable-master/jquery.contactable.js"></script>
-	
+	<link href="jquery-ui.css" rel="stylesheet">	
+	<link rel="stylesheet" href="contactable-master/contactable.css" type="text/css" />
 
 <style>
 
@@ -41,28 +42,26 @@ footer{
 	}
 
 </style>
-<link href="jquery-ui.css" rel="stylesheet">	
-<link rel="stylesheet" href="contactable-master/contactable.css" type="text/css" />
+
 
 
 <script>
 	$(function(){
-		$('#my-contact-div').contactable(
-        {
-            subject: 'feedback URL:'+location.href,
-            header: 'Write to me',
-            url: 'mail.php',
-            name: 'Name',
-            email: 'Email',
-            dropdownTitle: 'Subject',
-            dropdownOptions: ['General', 'Job interview', 'Personal'],
-            message : 'Message',
-            submit : 'Send',
-            recievedMsg : 'Thank you! I will get back to you soon',
-            notRecievedMsg : 'Sorry, there was some error! Pls try again!',
-            footer: 'Don´t hesitate to contact me:)',
-            hideOnSubmit: true
-        });
+		$('#my-contact-div').contactable({
+            		subject: 'feedback URL:'+location.href,
+            		header: 'Write to me',
+            		url: 'mail.php',
+            		name: 'Name',
+            		email: 'Email',
+            		dropdownTitle: 'Subject',
+            		dropdownOptions: ['General', 'Job interview', 'Personal'],
+            		message : 'Message',
+            		submit : 'Send',
+            		recievedMsg : 'Thank you! I will get back to you soon',
+            		notRecievedMsg : 'Sorry, there was some error! Pls try again!',
+            		footer: 'Don´t hesitate to contact me:)',
+            		hideOnSubmit: true
+        	});
 	});	
 
 	
