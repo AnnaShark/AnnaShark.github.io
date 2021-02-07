@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+	<title>Anna Shark</title>
+	
+	<script src="external/jquery/jquery.js"></script>
+	<script src="jquery-ui.js"></script>
+	
+
+	<style>
+
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		text-align: center;
+	}
+
+	.row{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 90%;
+	}
+	.box{
+		display: flex;
+		flex-direction: column;
+		flex-basis: 100%;
+		flex: 1;
+		padding: 20 px;
+		margin-top: 40px;
+	}
+
+	.text {
+	text-align: left;
+	margin-left: 200px; 
+	width: 500px;
+	}
+
+  	.field{
+    width: 200px;
+  	}
+
+	.ui-button{
+		width: 300px;
+		font-size: 90%;
+	}
+
+
+	.wrapper1{
+    display: flex;
+    justify-content: center;
+
+	}
+	a {
+		color: grey;
+	}
+
+	footer{
+		text-align: center;
+		color: grey;
+		font-size: 75%;
+    margin: 100px;
+	}
+
+	</style>
+<link href="jquery-ui.css" rel="stylesheet">	
+  
+<script>
+$().ready( function() {
+	$("#Form").on( "submit", function( event ) { 
+		event.preventDefault();
+		// Serializacion de datos
+		var datos = $( this ).serialize();
+		
+		// Envio de datos serializados
+		$.post('aitool.php', {'datos': datos}, refrescar, 'json'); //could be not json?
+		//console.log("here1")
+		// Limpieza de campos
+		$("input[name='t3']").val('');
+		$("input[name='tsh']").val('');
+		$("input[name='t4']").val('');
+		$("input[name='t4u']").val('');
+		$("input[name='fti']").val('');
+		$("#result").remove();
+		
+	}); 
+});
+
+function refrescar( entry ){
+	console.log(entry)
+
+	// Eliminar filas existentes
+	// Generacion de filas por cada usuario 
+	//$(entries).each(function( index, entry ) {
+		if (entry==1){
+			console.log("1 entry")
+			$("#Form").append($('<p id = result>').html("With 99% accuracy you might have Hypothyroidism"))
+			
+		} else if (entry==0){
+			$("#Form").append($('<p id = result>').html("With 98% accuracy you do NOT have Hypothyroidism"))
+			console.log("0 entry")
+		}
+	//});
+}
+
+</script>
+
+</head>
+
+<body>
+<header>
+
+<button onclick="document.location='index.html'" class="ui-button">Home</button>
+<button onclick="document.location='prof.html'" class="ui-button">Professional info</button>
+<button onclick="document.location='diary.php'" class="ui-button">Hypo tracker</button>
+<button onclick="document.location='contact.html'" class="ui-button">Contacts</button>
+
+<h1>Use AI tool to learn if you have Hypothyroidism</h1>
+
+</header>
+<dev class = row>
+<dev class = box>
+<p class = text>Latin is called a dead language because no one speaks Latin as a first language anymore. Even though it is a dead language, it is not an extinct language because it is still used in daily life by some people. In fact, many people still study it in school. Latin is still useful because it shows how society and the language used to work. Knowing Latin makes it easier to learn the Romance languages.
+
+	People still read Latin classics such as the poems of Virgil, the memoirs of Caesar and the speeches of Cicero. Also, Latin is widely used as an international auxiliary language, notably in the Catholic Church, and by biologists when describing and naming new species.
+	
+	Latin is still used in taxonomy to give scientific names to species and groups of species of living things. Some terms used in medicine to name parts of the body (such as bones) and diseases are also written in Latin.</p>
+
+
+</dev>
+
+
+<dev class = box>
+<form id = Form method="post">
+
+<label>Thyroid stimulating hormone (TSH):</label><br />
+<input class = "field" type="number" name="tsh"  step=".01" required ><br /><br />
+<label>Triiodothyronine (T3):</label><br />
+<input class = "field" type="number" name="t3"  step=".01" required ><br /><br />
+<label>Thyroxine (T4):</label><br />
+<input class = "field" type="number" name="t4"  step=".01" required ><br /><br />
+<label>Thyroxine utilization rates (T4U):</label><br />
+<input class = "field" type="number" name="t4u"  step=".01" required ><br /><br />
+<label>Free T4 index(FTI):</label><br />
+<input class = "field" type="number" name="fti"  step=".01" required ><br /><br />
+<br />
+<input class="ui-button ui-widget ui-corner-all" type="submit" value="Get results">
+</form> 
+
+</dev>
+</dev>
+<br />
+
+
+
+
+
+</body>
+
+
+<footer>
+    <p>Created by Anna Shark 2020</p>
+</footer>
+</html>

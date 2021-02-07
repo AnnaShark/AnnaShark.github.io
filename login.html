@@ -32,6 +32,15 @@
 
 	}
 
+	table {
+		border-collapse: collapse;
+		margin: 25px 0;
+		font-size: 0.9em;
+		min-width: 400px;
+		margin-left: auto;
+  		margin-right: auto;	
+    }
+
 
 	footer{
 		text-align: center;
@@ -43,25 +52,7 @@
 	</style>
 <link href="jquery-ui.css" rel="stylesheet">	
 
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker({
-      showOn: "button",
-      buttonImage: "images/calendar.gif",
-      buttonImageOnly: true,
-      buttonText: "Select date"
-    });
-  } );
-  </script>
 
-  <script>
-  $( function() {
-    $( ".widget input[type=submit], .widget a, .widget button" ).button();
-    $( "button, input, a" ).click( function( event ) {
-      event.preventDefault();
-    } );
-  } );
-  </script>
 
 </head>
 
@@ -70,33 +61,29 @@
 
 <button onclick="document.location='index.html'" class="ui-button">Home</button>
 <button onclick="document.location='prof.html'" class="ui-button">Professional info</button>
-<button onclick="document.location='meet.html'" class="ui-button">Let´s meet</button>
+<button onclick="document.location='diary.php'" class="ui-button">Let´s meet</button>
 <button onclick="document.location='contact.html'" class="ui-button">Contacts</button>
 
-<h1>Choose a date when you want to meet:</h1>
+<h1>Please log in to access your personal hypo tracker</h1>
+
 
 
 </header>
-<div class="wrapper1"> 
-
-<div id="datepicker"></div>
 
 
+<form action="access.php" method="post">
+    <label>Login e-mail:</label><br />
+    <input class = "field" type="text" name="mail"><br /><br />
+    <label>Password:</label><br />
+    <input class = "field" type="password" name="pass"><br /><br />
+	<input class="ui-button ui-widget ui-corner-all"  type="submit" name = "action" value="Login"> <br /><br />
+	<input class="ui-button ui-widget ui-corner-all"  type="submit" name = "action" value="Register">
+</form>
 
-</div>
 
 
-<br />
-<label>Name</label>
-<input class = "field" type="text" name="text" />
-<br />
-<br />
-<label>Email</label>
-<input class = "field" type="text" name="email" />
 
-<br />
-<br />
-<input class="ui-button ui-widget ui-corner-all" type="submit" value="Setup a meeting">
+
 
 </body>
 

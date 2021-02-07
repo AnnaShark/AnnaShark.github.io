@@ -24,7 +24,7 @@
 	</div>";
 
 	// Send and check the message status
-	$response = (mail('CHANGE@YOURADDRESS.COM', $subject, $contactMessage, $headers) ) ? "success" : "failure" ;
+	$response = (mail('a.a.sharkova@gmail.com', $subject, $contactMessage, $headers) ) ? "success" : "failure" ;
 	$output = json_encode(array("response" => $response));
 
 	header('content-type: application/json; charset=utf-8');
