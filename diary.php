@@ -54,7 +54,6 @@ if ( !isset($_SESSION['user'])) {
 	
 	thead tr {
 		background-color: #222222;
-		
 		color: #eeeeee;;
 		text-align: center;
 	}
@@ -79,7 +78,7 @@ if ( !isset($_SESSION['user'])) {
 		text-align: center;
 		color: grey;
 		font-size: 75%;
-    margin: 100px;
+    	margin: 100px;
 	}
 
 	</style>
@@ -167,10 +166,10 @@ function refrescar( entries ){
 <body>
 <header>
 
-<button onclick="document.location='index.html'" class="ui-button">Home</button>
-<button onclick="document.location='prof.html'" class="ui-button">Professional info</button>
-<button onclick="document.location='diary.php'" class="ui-button">Hypo tracker</button>
-<button onclick="document.location='contact.html'" class="ui-button">Contacts</button>
+<button onclick="document.location='index.html'" class="ui-button">Start</button>
+<button onclick="document.location='aitool.html'" class="ui-button">Diagnosis by AI</button>
+<button onclick="document.location='diary.php'" class="ui-button">Hypothyroidism tracker</button>
+<button onclick="document.location='tips.html'" class="ui-button">Lifestyle tips</button>
 
 <h1>Add analysis to the tracker</h1>
 or <a href="logout.php">Logout</a>

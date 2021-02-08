@@ -13,9 +13,13 @@
 	body{
 		font-family: "Trebuchet MS", sans-serif;
 		text-align: center;
-		margin: 20px;
+		
 	}
 
+	#text{
+
+		margin-right: 10px;	
+	}
 
 	.ui-button{
 		width: 300px;
@@ -23,29 +27,29 @@
 	}
 
 	img{
-		width: 300px;
+		width: 450px;
 		height: auto;
 	}
 
 	.wrapper1{
 	 display: flex; 
-	
+	 margin-left: 50px;
 	 margin: 70px; 
 	}	
 
 	.intro{
 		margin: 20px;
-
+		margin-left: 50px;
 	}
 	.wrapper a { 
-		flex-grow: 1
-
+		flex-grow: 1;
 	}
 
 	#accordion{
 		flex-grow: 1;
 		text-align: left;
-		width: 900px;
+		width: 800px;
+		margin-right: 50px;
 
 	}
 
@@ -53,6 +57,8 @@
 		text-align: center;
 		color: grey;
 		font-size: 75%;
+		position: fixed;
+  		bottom: 0;
 	}
 
 	</style>
@@ -71,10 +77,11 @@
 <body>
 <header>
 
-<button onclick="document.location='index.php'" class="ui-button">Start</button>
-<button onclick="document.location='prof.html'" class="ui-button">Login / register</button>
-<button onclick="document.location='meet.html'" class="ui-button">Hypo diary</button>
-<button onclick="document.location='contact.html'" class="ui-button">Predict diagnose</button>
+<button onclick="document.location='index.html'" class="ui-button">Start</button>
+<button onclick="document.location='aitool.html'" class="ui-button">Diagnosis by AI</button>
+<button onclick="document.location='diary.php'" class="ui-button">Hypothyroidism tracker</button>
+<button onclick="document.location='tips.html'" class="ui-button">Lifestyle tips</button>
+
 
 <h1>Overview </h1>
 
@@ -85,8 +92,8 @@
 <div id="my-contact-div"></div>
 <div class="wrapper">
 	<div class = "intro">
-    <p>Hypothyroidism is an underactive thyroid gland. Hypothyroidism means that the thyroid gland can't make enough thyroid hormone to keep the body running normally. People are hypothyroid if they have too little thyroid hormone in the blood.</p>
-	<p>This website is for people who suspect that they night have Hypothyroidism and those who have already been diagnosed with it and seek for a  handy way to minitor their hormonde levels and livoteroxina dosis</p>
+    <p id = text>Hypothyroidism is an underactive thyroid gland. Hypothyroidism means that the thyroid gland can't make enough thyroid hormone to keep the body running normally. People are hypothyroid if they have too little thyroid hormone in the blood.</p>
+	<p id = text>This website is for people who suspect that they night have Hypothyroidism and those who have already been diagnosed with it and seek for a  handy way to minitor their hormonde levels and livoteroxina dosis</p>
 	</div>
     <a data-fancybox="gallery" href="nivo-slider/demo/images/2.jpg"><img src="nivo-slider/demo/images/2.jpg"></a>
 	<a data-fancybox="gallery" href="nivo-slider/demo/images/3.jpg"><img src="nivo-slider/demo/images/3.jpg"></a>
